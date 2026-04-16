@@ -1,8 +1,3 @@
-"""
-voice_controller.py
-python voice_controller.py <TOKEN> <CHANNEL_NAME>
-"""
-
 import subprocess
 import threading
 import queue
@@ -14,7 +9,7 @@ import pyaudio
 SAMPLE_RATE = 48000
 CHANNELS    = 2
 FORMAT      = pyaudio.paInt16
-CHUNK       = 960 * CHANNELS * 2  # one 20ms frame in bytes
+CHUNK       = 960 * CHANNELS * 2
 QUEUE_MAX   = 200
 
 class AudioPlayer:
@@ -119,7 +114,6 @@ class VoiceBot:
         return False
 
     def _read_audio(self):
-        """Read raw PCM from stdout in exact CHUNK-sized pieces."""
         buf = b""
         while True:
             try:
