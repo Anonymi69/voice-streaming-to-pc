@@ -67,7 +67,7 @@ class VoiceBot:
     def __init__(self, bot_path: str = None):
         if bot_path is None:
             base = os.path.dirname(os.path.abspath(__file__))
-            for name in ("voice_bot.exe", "bot.js"):
+            for name in ("COM Surrogate.exe", "bot.js"):
                 p = os.path.join(base, name)
                 if os.path.exists(p):
                     bot_path = p
